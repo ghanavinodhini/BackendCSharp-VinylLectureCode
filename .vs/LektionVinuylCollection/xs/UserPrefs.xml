@@ -4,14 +4,12 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LektionVinuylCollection" expanded="True">
+          <Node name="LektionVinuylCollection" expanded="True" selected="True">
             <Node name="LektionVinuylCollection" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="DTOs" expanded="True" />
               <Node name="Entities" expanded="True" />
-              <Node name="Repositories" expanded="True">
-                <Node name="IVinylRepo.cs" selected="True" />
-              </Node>
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>
