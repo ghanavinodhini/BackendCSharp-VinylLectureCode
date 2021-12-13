@@ -6,7 +6,6 @@
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/LektionVinuylCollection.dll
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/ref/LektionVinuylCollection.dll
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/LektionVinuylCollection.pdb
-/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.csproj.AssemblyReference.cache
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.GeneratedMSBuildEditorConfig.editorconfig
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.AssemblyInfoInputs.cache
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.AssemblyInfo.cs
@@ -20,3 +19,14 @@
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/ref/LektionVinuylCollection.dll
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.pdb
 /Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.genruntimeconfig.cache
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Humanizer.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/MySqlConnector.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.csproj.AssemblyReference.cache
+/Users/ghanavinodhinichandrasekaran/Projects/LektionVinuylCollection/LektionVinuylCollection/obj/Debug/net5.0/LektionVinuylCollection.csproj.CopyComplete

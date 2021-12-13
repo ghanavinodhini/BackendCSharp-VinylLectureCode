@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LektionVinuylCollection.Controllers;
+using LektionVinuylCollection.Entities;
 using LektionVinuylCollection.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,8 @@ namespace LektionVinuylCollection
         {
 
             services.AddControllers();
-            services.AddSingleton<IVinylRepo, VinylRepo>();
+            services.AddScoped<IVinylRepo, VinylRepo>();
+            services.AddDbContext<ApplicationContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

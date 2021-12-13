@@ -11,7 +11,7 @@ namespace LektionVinuylCollection.Repositories
         List<Vinyl> GetAll();
         //Vinyl CreateVinyl(Vinyl vinyl); -used without creating CreateVinylDTO
         Vinyl CreateVinyl(CreateVinylDTO vinyl);
-        Vinyl UpdateVinyl(Vinyl vinyl);
+        Vinyl UpdateVinyl(Vinyl vinyl, int id);
         void DeleteVinyl(int id);
     }
 }

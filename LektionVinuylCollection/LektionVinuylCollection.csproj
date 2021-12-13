@@ -8,10 +8,20 @@
     <None Remove="Entities\" />
     <None Remove="Repositories\" />
     <None Remove="DTOs\" />
+    <None Remove="Microsoft.Bcl.AsyncInterfaces" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Pomelo.EntityFrameworkCore.MySql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
     <Folder Include="DTOs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.3" />
   </ItemGroup>
 </Project>

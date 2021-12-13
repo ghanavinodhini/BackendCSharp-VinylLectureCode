@@ -89,11 +89,11 @@ namespace LektionVinuylCollection.Controllers
         }
 
         [HttpPut]
-        [Route("")]
+        [Route("{id}")]
         //public Vinyl UpdateVinyl([FromBody]Vinyl vinyl)
-        public IActionResult UpdateVinyl([FromBody] Vinyl vinyl)
+        public IActionResult UpdateVinyl([FromBody] Vinyl vinyl, int id)
         {
-            Vinyl updatedVinyl = _repo.UpdateVinyl(vinyl);
+            Vinyl updatedVinyl = _repo.UpdateVinyl(vinyl,id);
             VinylDTO vinylDTO = MapVinylToVinylDTO(updatedVinyl);
             return Ok(vinylDTO);
             //return Ok(updatedVinyl); //used without creating VinylDTO
