@@ -3,14 +3,16 @@ using System;
 using LektionVinuylCollection.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LektionVinuylCollection.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20211215180034_seed_data_for_artists")]
+    partial class seed_data_for_artists
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,21 +44,21 @@ namespace LektionVinuylCollection.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 576, DateTimeKind.Local).AddTicks(4730),
+                            Created = new DateTime(2021, 12, 15, 19, 0, 34, 355, DateTimeKind.Local).AddTicks(390),
                             FavoriteCar = "Benz",
                             Name = "Artist 1"
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 576, DateTimeKind.Local).AddTicks(5870),
+                            Created = new DateTime(2021, 12, 15, 19, 0, 34, 355, DateTimeKind.Local).AddTicks(1650),
                             FavoriteCar = "Volvo",
                             Name = "Artist 2"
                         },
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 576, DateTimeKind.Local).AddTicks(5880),
+                            Created = new DateTime(2021, 12, 15, 19, 0, 34, 355, DateTimeKind.Local).AddTicks(1660),
                             FavoriteCar = "Volkswagen",
                             Name = "Artist 3"
                         });
@@ -83,50 +85,6 @@ namespace LektionVinuylCollection.Migrations
                     b.HasIndex("ArtistID");
 
                     b.ToTable("Vinyls");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ArtistID = 1,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 578, DateTimeKind.Local).AddTicks(3540),
-                            Title = "Title 1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ArtistID = 2,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 578, DateTimeKind.Local).AddTicks(5200),
-                            Title = "Title 2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ArtistID = 3,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 578, DateTimeKind.Local).AddTicks(5210),
-                            Title = "Title 3"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ArtistID = 3,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 578, DateTimeKind.Local).AddTicks(5220),
-                            Title = "Title 4"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ArtistID = 3,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 578, DateTimeKind.Local).AddTicks(5220),
-                            Title = "Title 5"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ArtistID = 3,
-                            Created = new DateTime(2021, 12, 15, 19, 6, 28, 578, DateTimeKind.Local).AddTicks(5220),
-                            Title = "Title 6"
-                        });
                 });
 
             modelBuilder.Entity("LektionVinuylCollection.Entities.Vinyl", b =>

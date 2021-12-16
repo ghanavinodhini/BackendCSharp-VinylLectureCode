@@ -15,10 +15,7 @@ namespace LektionVinuylCollection.Entities
         [ForeignKey("Artist")]
         public int ArtistID { get; set; }
 
-        public string Artist { get; set; }
-
-        //[Required] - commented afer relation b/w tables lesson
-        // public string Artist { get; set; }
+        public Artist Artist { get; set; }
 
         public DateTime Created { get; set; }
     }

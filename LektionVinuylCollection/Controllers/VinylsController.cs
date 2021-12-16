@@ -26,13 +26,18 @@ namespace LektionVinuylCollection.Controllers
           public IActionResult GetVinyls()
         {
             //List<Vinyl> vinyls = _repo.GetAll(); //used without VinylDTO
-            var vinylsDTO = _repo.GetAll().Select(v => new VinylDTO
-            {
-                Id = v.Id,
-                Artist = v.Artist,
-                Title = v.Title
-            }).OrderBy(x=>x.Title);
-            return Ok(vinylsDTO);
+            var vinyls = _repo.GetAll().ToList().MapToVinylDTOs();
+            return Ok(vinyls);
+
+            //Below Select block commented after creating extension methods during relation b/w tables
+            /*  var vinylsDTO = _repo.GetAll().Select(v => new VinylDTO
+          {
+              Id = v.Id,
+              //Artist = v.Artist,-commented after relation b/w tables
+              ArtistID = v.ArtistID,
+              Title = v.Title
+          }).OrderBy(x=>x.Title); 
+            return Ok(vinylsDTO); */
             //return Ok(vinyls); //used without VinylDTO
         }
 
@@ -56,7 +61,8 @@ namespace LektionVinuylCollection.Controllers
                 Title = vinyl.Title,
             };*/ //used without creating MapVinylToVinylDTO function
 
-            VinylDTO vinylDTO = MapVinylToVinylDTO(vinyl);
+            // VinylDTO vinylDTO = MapVinylToVinylDTO(vinyl); - commented after creating extension methods
+            VinylDTO vinylDTO = vinyl.MapToVinylDTO();
             return Ok(vinylDTO);
             //return Ok(vinyl); //used with IActionREsult without creating VinylDTO
             //return _repo.GetByID(id); //used without IAcionResult
@@ -79,7 +85,8 @@ namespace LektionVinuylCollection.Controllers
              };*/ //used without creating MapVinylToVinylDTO function
 
 
-            VinylDTO vinylDTO = MapVinylToVinylDTO(createdVinyl);
+            // VinylDTO vinylDTO = MapVinylToVinylDTO(createdVinyl); - commentd after creating extension method
+            VinylDTO vinylDTO = createdVinyl.MapToVinylDTO();
             return CreatedAtAction(
                 nameof(GetVinylByID),
                 new { id = vinylDTO.Id },
@@ -94,7 +101,9 @@ namespace LektionVinuylCollection.Controllers
         public IActionResult UpdateVinyl([FromBody] Vinyl vinyl, int id)
         {
             Vinyl updatedVinyl = _repo.UpdateVinyl(vinyl,id);
-            VinylDTO vinylDTO = MapVinylToVinylDTO(updatedVinyl);
+            //VinylDTO vinylDTO = MapVinylToVinylDTO(updatedVinyl); - commented after creating extension method
+
+            VinylDTO vinylDTO = updatedVinyl.MapToVinylDTO();
             return Ok(vinylDTO);
             //return Ok(updatedVinyl); //used without creating VinylDTO
         }
@@ -108,15 +117,17 @@ namespace LektionVinuylCollection.Controllers
             return NoContent();
         }
 
-        private VinylDTO MapVinylToVinylDTO(Vinyl vinyl)
+        //Below function commented after creating BasicArtistDTO and extension methods for vinyl,artist
+       /* private VinylDTO MapVinylToVinylDTO(Vinyl vinyl)
         {
             return new VinylDTO
             {
                 Id = vinyl.Id,
-                Artist = vinyl.Artist,
+                //Artist = vinyl.Artist,- commented after relation b/w tables
+               // ArtistID = vinyl.ArtistID, 
                 Title = vinyl.Title,
             };
-        }
+        } */
 
     }
 }

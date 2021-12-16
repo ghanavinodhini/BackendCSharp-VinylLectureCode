@@ -16,7 +16,7 @@ namespace LektionVinuylCollection.Entities
         public string FavoriteCar { get; set; }
 
         [Required]
-        public DataType Created { get; set; }
+        public DateTime Created { get; set; }
 
         public List<Vinyl> Vinyls { get; set; } //added after relation b/w tables lesson
 

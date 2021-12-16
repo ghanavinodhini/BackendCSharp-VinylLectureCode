@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using LektionVinuylCollection.DTOs;
 using LektionVinuylCollection.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace LektionVinuylCollection.Repositories
 {
@@ -19,7 +20,7 @@ namespace LektionVinuylCollection.Repositories
             _db = context;
         }
 
-        private List<Vinyl> populateVinylData()
+       /* private List<Vinyl> populateVinylData()
         {
             return new List<Vinyl>
             {
@@ -27,21 +28,24 @@ namespace LektionVinuylCollection.Repositories
             new Vinyl { Id = 2, Artist = "Leonard Cohen", Title = "Ten New Songs",Created=DateTime.Now, },
             new Vinyl { Id = 3, Artist = "Flamingokvintetten", Title = "Flamingokvintetten 12",Created=DateTime.Now, },
             };
-        }
+        }*/
 
         
 
         public Vinyl GetByID(int id)
         {
             //Vinyl vinyl = _collection.Find(vinyl => vinyl.Id == id);- commented after setting up Migrations and Table creation in MYSql Workbench to eliminate hard coded data values to fetch in API
-            Vinyl vinyl = _db.Vinyls.Find(id);//-Passing column name 'id' from table
+            //Vinyl vinyl = _db.Vinyls.Find(id);//-Passing column name 'id' from table - commented after relation b/w tables and creating extension methods
+            Vinyl vinyl = _db.Vinyls.Include(v => v.Artist).SingleOrDefault(x => x.Id == id);
             return vinyl;
         }
 
         public List<Vinyl> GetAll()
         {
             // return _collection;- commented after setting up Migrations and Table creation in MYSql Workbench to eliminate hard coded data values to fetch in API
-            return _db.Vinyls.ToList(); //-ToList() is given to convert DbContext to List
+            //return _db.Vinyls.ToList(); //-ToList() is given to convert DbContext to List - commented after creating extension methods
+
+            return _db.Vinyls.Include(v => v.Artist).ToList();
         }
 
         //public Vinyl CreateVinyl(Vinyl vinyl) - used without creating CreateVinylDTO
@@ -50,7 +54,8 @@ namespace LektionVinuylCollection.Repositories
             Vinyl vinyl = new Vinyl(); //used this line after creating CreateVinylDTO
 
             vinyl.Created = DateTime.Now;
-            vinyl.Artist = createdVinylDTO.Artist; //These 2 lines are added after creating migrations and Db in Mysql
+            // vinyl.Artist = createdVinylDTO.Artist; //These 2 lines are added after creating migrations and Db in Mysql-commented after relation b/w tables
+            vinyl.ArtistID = createdVinylDTO.ArtistID;
             vinyl.Title = createdVinylDTO.Title;
 
             // vinyl.Id = _collection.Max(x => x.Id) + 1; - These 2 lines commented after setting up Migrations and Table creation in MYSql Workbench to eliminate hard coded data values to fetch in API
